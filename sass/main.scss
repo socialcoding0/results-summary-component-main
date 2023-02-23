@@ -43,6 +43,9 @@ body {
   font-family: "Hanken Grotesk", sans-serif;
   background-color: $White;
 
+  h1 {
+    display: none;
+  }
   #container {
     width: 35%;
 
