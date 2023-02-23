@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: white; }
+  body #container {
+    width: 35%;
+    min-width: 535px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px 2px rgba(120, 87, 255, 0.4); }
+    body #container #result {
+      background-image: linear-gradient(#7857ff, #2e2be9 90%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 2.5rem;
+      gap: 1rem;
+      width: 50%;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px; }
+      body #container #result p {
+        color: #c8c7ff;
+        font-size: 0.9rem;
+        font-weight: 500; }
+      body #container #result #sum {
+        text-align: center;
+        background-image: linear-gradient(#4e21ca, rgba(36, 33, 202, 0));
+        width: 140px;
+        height: 140px;
+        border-radius: 100%;
+        padding: 2rem; }
+        body #container #result #sum span {
+          font-size: 3rem;
+          color: white;
+          font-weight: 700; }
+        body #container #result #sum p {
+          color: rgba(200, 199, 255, 0.5);
+          font-size: 0.8rem; }
+      body #container #result #info-header {
+        font-size: 1.3rem;
+        color: white; }
+      body #container #result #info {
+        font-size: 0.8rem;
+        text-align: center; }
+    body #container #summary {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem 0rem;
+      padding: 1.3rem 2rem;
+      width: 50%;
+      background-color: white; }
+      body #container #summary p {
+        font-size: 0.9rem;
+        font-weight: 700; }
+      body #container #summary .reaction {
+        background-color: rgba(255, 87, 87, 0.2); }
+        body #container #summary .reaction p {
+          color: #ff5757; }
+      body #container #summary .memory {
+        background-color: rgba(255, 176, 31, 0.2); }
+        body #container #summary .memory p {
+          color: #ffb01f; }
+      body #container #summary .verbal {
+        background-color: rgba(0, 189, 145, 0.2); }
+        body #container #summary .verbal p {
+          color: #00bd91; }
+      body #container #summary .visual {
+        background-color: rgba(17, 37, 212, 0.2); }
+        body #container #summary .visual p {
+          color: #1125d4; }
+      body #container #summary .small-container {
+        display: flex;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0.6rem; }
+        body #container #summary .small-container img {
+          width: 15px;
+          margin-right: 5px; }
+        body #container #summary .small-container p {
+          font-size: 0.8rem; }
+        body #container #summary .small-container .score {
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          gap: 0.2rem; }
+          body #container #summary .small-container .score p {
+            font-weight: 800;
+            color: black; }
+          body #container #summary .small-container .score span {
+            font-size: 0.7rem;
+            color: #303b5a; }
+      body #container #summary button {
+        padding: 0.8rem;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background-color: #303b5a;
+        color: white;
+        font-family: "Hanken Grotesk", sans-serif;
+        margin-top: 1rem; }
+        body #container #summary button:hover {
+          background-image: linear-gradient(#7857ff, #2e2be9 90%); }
+
+@media screen and (max-width: 550px) {
+  body {
+    align-items: flex-start; }
+    body #container {
+      flex-direction: column;
+      min-width: 300px !important;
+      max-width: 350px;
+      border-top-left-radius: 0px !important;
+      border-top-right-radius: 0px !important;
+      min-height: 100vh; }
+      body #container #result,
+      body #container #summary {
+        width: 100% !important; }
+      body #container #result {
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px !important; } }
+
+@media screen and (max-width: 390px) {
+  #container {
+    width: 100% !important; } }

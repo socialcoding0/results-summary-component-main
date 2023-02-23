@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ## Colors
+
+// ### Primary
+
+$Light-red: hsl(0, 100%, 67%);
+$Orangey-yellow: hsl(39, 100%, 56%);
+$Green-teal: hsl(166, 100%, 37%);
+$Cobalt-blue: hsl(234, 85%, 45%);
+
+// ## Gradients
+
+// (background)
+$Light-slate-blue: rgb(120, 87, 255);
+
+// (background)
+$Light-royal-blue: rgb(46, 43, 233);
+
+// (circle)
+$Violet-blue: rgb(78, 33, 202);
+// (circle)
+$Persian-blue: rgba(36, 33, 202, 0);
+
+// ### Neutral
+
+$White: hsl(0, 0%, 100%);
+$Pale-blue: hsl(221, 100%, 96%);
+$Light-lavender: hsl(241, 100%, 89%);
+$Dark-gray-blue: hsl(224, 30%, 27%);
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: $White;
+
+  #container {
+    width: 35%;
+
+    min-width: 535px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px 2px rgba(120, 87, 255, 0.4);
+    #result {
+      background-image: linear-gradient(
+        $Light-slate-blue,
+        $Light-royal-blue 90%
+      );
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 2.5rem;
+      gap: 1rem;
+      width: 50%;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      p {
+        color: $Light-lavender;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      #sum {
+        text-align: center;
+        background-image: linear-gradient($Violet-blue, $Persian-blue);
+        width: 140px;
+        height: 140px;
+        border-radius: 100%;
+        padding: 2rem;
+
+        span {
+          font-size: 3rem;
+          color: $White;
+          font-weight: 700;
+        }
+
+        p {
+          color: hsla(241, 100%, 89%, 0.5);
+          font-size: 0.8rem;
+        }
+      }
+
+      #info-header {
+        font-size: 1.3rem;
+        color: white;
+      }
+
+      #info {
+        font-size: 0.8rem;
+        text-align: center;
+      }
+    }
+
+    #summary {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem 0rem;
+      padding: 1.3rem 2rem;
+      width: 50%;
+      background-color: $White;
+
+      p {
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+      .reaction {
+        background-color: hsla(0, 100%, 67%, 0.2);
+        p {
+          color: $Light-red;
+        }
+      }
+      .memory {
+        background-color: hsla(39, 100%, 56%, 0.2);
+        p {
+          color: $Orangey-yellow;
+        }
+      }
+      .verbal {
+        background-color: hsla(166, 100%, 37%, 0.2);
+        p {
+          color: $Green-teal;
+        }
+      }
+      .visual {
+        background-color: hsla(234, 85%, 45%, 0.2);
+        p {
+          color: $Cobalt-blue;
+        }
+      }
+      .small-container {
+        display: flex;
+
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0.6rem;
+
+        img {
+          width: 15px;
+          margin-right: 5px;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+
+        .score {
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+
+          p {
+            font-weight: 800;
+            color: black;
+          }
+          span {
+            font-size: 0.7rem;
+            color: $Dark-gray-blue;
+          }
+        }
+      }
+
+      button {
+        padding: 0.8rem;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background-color: $Dark-gray-blue;
+        color: $White;
+        font-family: "Hanken Grotesk", sans-serif;
+        margin-top: 1rem;
+
+        &:hover {
+          background-image: linear-gradient(
+            $Light-slate-blue,
+            $Light-royal-blue 90%
+          );
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    align-items: flex-start;
+
+    #container {
+      flex-direction: column;
+      min-width: 300px !important ;
+      max-width: 350px;
+      border-top-left-radius: 0px !important;
+      border-top-right-radius: 0px !important;
+      min-height: 100vh;
+      #result,
+      #summary {
+        width: 100% !important;
+      }
+
+      #result {
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  #container {
+    width: 100% !important;
+  }
+}
